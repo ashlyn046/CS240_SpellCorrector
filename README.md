@@ -1,6 +1,6 @@
 # CS240_SpellCorrector
 
-This is a project for Brigham Young University's CS 240 course. The following are the prject specifications provided by the program.
+This is a project for Brigham Young University's CS 240 course. The following are the project specifications provided by the program.
 
 ## Spelling Corrector Project
 
