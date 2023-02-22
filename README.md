@@ -2,6 +2,9 @@
 
 This is a project for Brigham Young University's CS 240 course. The following are the project specifications provided by the program.
 
+Find my code under src/spell.
+
+
 ## Spelling Corrector Project
 
 Introduction
