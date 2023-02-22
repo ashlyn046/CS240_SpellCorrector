@@ -37,49 +37,7 @@ public class SpellCorrector implements ISpellCorrector {
             String currstr = currstrraw.toLowerCase();
 
             trie.add(currstr);
-
-            //this code is a check
-            //System.out.println(currstr);
-            //i++;
         }
-
-        //UPDATE CHECKS
-
-        /*
-        //printing trie, don't actually do this!
-        System.out.println(trie);
-
-        //checking equals UPDATE DONT KEEP
-        //creating a NEW instance of our Trie
-        File file2 = new File(dictionaryFileName);
-        Scanner scanner2 = new Scanner(file2);
-
-        Trie trie2 = new Trie();
-
-        while(scanner2.hasNext()){
-            //reading in the next word
-            String currstrraw2 = scanner2.next();
-            //converting it to lowercase
-            String currstr2 = currstrraw2.toLowerCase();
-
-            trie2.add(currstr2);
-
-            //this code is a check
-            //System.out.println(currstr);
-            //i++;
-        }
-        System.out.println(trie2);
-
-        System.out.println(trie.equals(trie2));
-        System.out.println(trie.hashCode());
-        System.out.println(trie2.hashCode());
-
-        Trie trie3 = new Trie();
-        System.out.println(trie3.hashCode());
-
-         */
-
-
     }
 
     @Override
@@ -275,15 +233,6 @@ public class SpellCorrector implements ISpellCorrector {
                 transmap.put(currstr, 0);
             }
         }
-        //System.out.println("transmap" + transmap);
-          /*
-        Transposition Distance: A string s has a transposition distance 1 from another string t if and only if t
-        is equal to s with two adjacent characters transposed. The only strings that are a transposition Distance
-        of 1 from “house” are “ohuse”, “huose”, “hosue” and “houes”. Note that if a string s has a transposition
-        distance of 1 from another string t then |s| = |t|. Also, there are exactly |t| - 1 strings that are a
-        transposition distance of 1 from t. The dictionary may contain 0 to n of the strings one transposition
-        distance from t.
-         */
         return transmap;
     }
 
@@ -311,18 +260,6 @@ public class SpellCorrector implements ISpellCorrector {
                 }
             }
         }
-        //System.out.println("altmap: " + altmap);
-
-
-        /*
-        Alteration Distance: A string s has an alteration distance 1 from another string t if and only if t is
-        equal to s with exactly one character in s replaced by a lowercase letter that is not equal to the
-        original letter. The only strings that are an alternation distance of 1 from “top” are “aop”, “bop”, …,
-        “zop”, “tap”, “tbp”, …, “tzp”, “toa”, “tob”, …, and “toz”. Note that if a string s has an alteration
-        distance of 1 from another string t then |s| = |t|. Also, there are exactly 25* |t| strings that are an
-        alteration distance of 1 from t. The dictionary may contain 0 to n of the strings one alteration distance
-        from t.
-         */
         return altmap;
     }
 
@@ -351,16 +288,6 @@ public class SpellCorrector implements ISpellCorrector {
                 }
             }
         }
-        //System.out.println("insmap: " + insmap);
-
-        /*
-        Insertion Distance: A string s has an insertion distance 1 from another string t if and only if t has a
-        deletion distance of 1 from s. The only strings that are an insertion distance of 1 from “ask” are “aask”,
-        “bask”, “cask”, … “zask”, “aask”, “absk”, “acsk”, … “azsk”, “asak”, “asbk”, “asck”, … “aszk”, “aska”,
-        “askb”, “askc”, … “askz”. Note that if a string s has an insertion distance of 1 from another string t
-        then |s| = |t|+1. Also, there are exactly 26* (|t| + 1) strings that are an insertion distance of 1 from t.
-        The dictionary may contain 0 to n of the strings one insertion distance from t.
-         */
         return insmap;
     }
 }

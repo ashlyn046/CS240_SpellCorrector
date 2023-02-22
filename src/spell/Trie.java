@@ -66,7 +66,7 @@ public class Trie implements ITrie{
                 mult = mult * i;
 
                 //resetting node as the child node
-                node = (Node) node.getChildrenArray()[i];
+                //node = (Node) node.getChildrenArray()[i];
             }
         }
         return mult;
