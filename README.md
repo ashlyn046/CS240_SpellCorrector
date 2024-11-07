@@ -30,6 +30,7 @@ The Trie supports the following edit distance types:
    - Alphabetical order (when frequency is the same).
 
 3. **Trie Methods**: Implements standard methods like `toString()`, `hashCode()`, and `equals()` for Trie operations.
+   
 
 ## Deliverables
 
